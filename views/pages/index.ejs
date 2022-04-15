@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<div class="container-fluid"></div>
+<html lang="en">
+
+<head>
+  <%- include('../partials/head'); %>
+</head>
+
+<body class="container w-100">
+
+  <header>
+    <%- include('../partials/header'); %>
+  </header>
+
+  <main>
+
+    <div class="jumbotron">
+
+
+      <div class="row">
+        <div class="column">
+          <% for(let i=0; i < 4; i++) { console.log(images[i])%>
+            <div class="card">
+              <img src="/img/<%=images[i] %>" alt="image" class="w-100" />
+            </div>
+            <% } %>
+        </div>
+        <div class="column">
+          <% for(let i=4; i < 8; i++) { console.log(images[i])%>
+            <div class="card">
+              <img src="/img/<%=images[i] %>" alt="image" class="w-100" />
+            </div>
+            <% } %>
+        </div>
+        <div class="column">
+          <% for(let i=8; i < 12; i++) { console.log(images[i])%>
+            <div class="card">
+              <img src="/img/<%=images[i] %>" alt="image" class="bs-card-image" />
+            </div>
+            <% } %>
+        </div>
+      </div>
+      <div class="d-flex justify-content-center">
+        <% if (page> 1) { %>
+          <a href="/prevTen" class="btn btn-dark" id="back-front-buttons">Previous</a>
+          <%}%>
+            <a href="/nextTen" class="btn btn-dark" id="back-front-buttons">Next</a>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <%- include('../partials/footer'); %>
+  </footer>
+
+</body>
+
+</html>
+</div>
