@@ -44,12 +44,17 @@
         <% if (page> 1) { %>
           <a href="/prevTen" class="btn btn-dark" id="back-front-buttons">Previous</a>
           <%}%>
+
+
             <a href="/nextTen" class="btn btn-dark" id="back-front-buttons">Next</a>
+
       </div>
     </div>
+    <p>Page: <%=page%> of <%=numberOfPages%> </p>
   </main>
 
   <footer>
+    
     <%- include('../partials/footer'); %>
   </footer>
 
