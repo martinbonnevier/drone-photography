@@ -41,6 +41,11 @@
         </div>
       </div>
       <div class="d-flex justify-content-center">
+        <p class="display-6">Page: <%=page%> of <%=numberOfPages%> </p>
+      </div>
+      
+      <div class="d-flex justify-content-center">
+        
         <% if (page> 1) { %>
           <a href="/prevTen" class="btn btn-dark" id="back-front-buttons">Previous</a>
           <%}%>
@@ -50,7 +55,7 @@
 
       </div>
     </div>
-    <p>Page: <%=page%> of <%=numberOfPages%> </p>
+    
   </main>
 
   <footer>
