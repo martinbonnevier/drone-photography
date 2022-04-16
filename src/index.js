@@ -3,7 +3,7 @@ const app = express();
 import bodyParser from 'body-parser';
 import { router } from './routes/router.js';
 import cors from 'cors';
-
+import 'dotenv/config'
 app.use(express.static('public'));
 
 app.use(express.json());
@@ -13,4 +13,4 @@ app.use('/', cors(), router)
 app.use('/', router);
 
 
-app.listen(7800, () => console.log('Server started on port 7800'));
+app.listen(process.env.PORT, () => console.log('Server started on port 7800'));
