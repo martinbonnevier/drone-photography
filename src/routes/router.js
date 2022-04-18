@@ -20,7 +20,6 @@ router.get('/nextTen', (req, res) => {
 }
     
 );
-
 router.get('/prevTen', (req, res) => {
   imageController.renderPrevTen(req, res);
 } 
